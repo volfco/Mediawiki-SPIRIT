@@ -1,10 +1,28 @@
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,900);
+
 body {
-	background-color: #fff;
-	background-image: url(images/wiki-bg.jpg);
+	background-color: #eeeeee;
+	/* background-image: url(images/wiki-bg.jpg); */
 	background-repeat: repeat-x;
 	background-position: center 80px;
 	color: #222;
-	padding-top: 128px;
+
+    /* Stupid trendy ass font.*/
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+}
+.body-container.logged-in {
+    padding-top: 128px;
+}
+.body-container.not-logged-in {
+    padding-top: 80px;
+}
+a {
+	color: #F36E21;
+}
+a:hover, a:focus {
+	color: #BD4C0A;
 }
 
 body.page-Main_Page .page-header,
@@ -40,7 +58,9 @@ p {
 .mw-content-ltr ul, .mw-content-ltr ol {
 	margin-bottom: 9px;;
 }
-
+.navbar-brand {
+    padding-top: 10px !important;
+}
 .navbar-brand img {
 	margin-right: 0.5em;
 	max-height: 30px;
@@ -107,9 +127,7 @@ option.unclickable {
 	color: #ccc;
 }
 
-#subnav-select {
-	display: none;
-}
+
 
 .nav .user-icon {
 	border: 1px solid rgba( 55, 55, 55, 0.1 );
@@ -174,52 +192,7 @@ option.unclickable {
 	height: auto !important;
 }
 
-#toc:not(.toc-sidebar) {
-	display: none;
-	float: right;
-	margin: 0 0 1em 1em;
-}
 
-#toc td {
-	background: #eee;
-	border: 1px solid #ddd;
-	border-radius: 0.5em;
-	display: block;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	padding: 0 1em 1em 1em;
-
-	box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
-}
-
-#toc.toc-sidebar td {
-	background: transparent;
-	border: none;
-	box-shadow: none;
-	display: table-cell;
-	padding: 0;
-}
-
-#toc.toc-sidebar li {
-	line-height: 20px;
-	list-style-type: none;
-}
-
-#toc.toc-sidebar li li {
-	margin-left: 20px;
-}
-
-#toc.toc-sidebar h3 {
-	font-size: 1em;
-}
-
-.toc-sidebar .toctoggle {
-	display: none;
-}
-
-#toctitle h2 {
-	font-size: 16px;
-}
 
 a.new {
 	color: #86100f;
@@ -244,10 +217,9 @@ a.new {
 }
 
 .bottom {
-	background: #f5f5f5;
-	margin-top: 1em;
+	background: #333;
+	margin-top: 3em;
 	padding-bottom: 2em;
-	padding-top: 2em;
 }
 
 .bottom .mw-editsection {
@@ -347,34 +319,6 @@ img.thumbborder {
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
-@media (max-width: 767px) {
-	body {
-		padding-left: 0;
-		padding-right: 0;
-		padding-top: 59px;
-	}
-
-	.bottom,
-	#wiki-outer-body {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.navbar {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-@media (max-width: 979px) {
-	body {
-		padding-top: 59px;
-	}
-
-	#wiki-outer-body {
-		margin-top: 10px;
-	}
-}
 
 .subnav .container .nav {
   margin-bottom: 0;
@@ -449,7 +393,7 @@ pre.linenums ol {
 /* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
 .subnav-fixed {
 	position: fixed;
-	top: 49px;
+	top: 48px;
 	left: 0;
 	right: 0;
 	z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
@@ -460,7 +404,7 @@ pre.linenums ol {
 					border-radius: 0;
 }
 .subnav-fixed .nav {
-	width: 1170px;
+	/* width: 1170px; */
 	margin: 0 auto;
 	margin-left: -12px;
 	padding: 0 1px;
@@ -472,73 +416,19 @@ pre.linenums ol {
 					border-radius: 0;
 }
 
-@media (max-width: 979px) {
-	body { padding-top: 103px; }
 
-	.mw-headline {
-		margin-top: -103px;
-		padding-top: 103px;
-	}
 
-	.subnav #subnav-select {
-		margin-left: 20px;
-		display: inline-block;
-	}
 
-	.subnav .nav {
-		display: none;
-	}
-
-	.navbar-form,
-	.navbar-search {
-		margin-bottom: 0;
-	}
-
-	.nabar-inner,
-	.navbar-fixed-top {
-		margin-bottom: 0;
-	}
-
-	.navbar-inner {
-		padding-bottom: 0;
-	}
-
-	.subnav .container {
-		padding-bottom: 1rem;
-		padding-top: 1rem;
-	}
-}
-
-/* responsive */
-@media (max-width: 480px) {
-
-	#toc {
-		float: none;
-		width: 100%;
-		margin-left: 0;
-	}
-
-	.jumbotron {
-		padding: 2em;
-	}
-
-	.jumbotron p {
-		font-size: 1em;
-		line-height: 1.5em;
-	}
-
-	.jumbotron h1 {
-		font-size: 1.5em;
-	}
-
-	.jumbotron pre {
-		display: none;
-	}
-}
-
+/* Tables */
 table.list th {
 	background: #eee;
 }
+th.navbox-title .navbar {
+    min-height: 0px !important;
+}
+
+
+
 
 .info-box {
 	clear: right;
@@ -641,7 +531,6 @@ table.list th {
   padding: 8px;
   line-height: 20px;
   text-align: left;
-  vertical-align: top;
   border-top: 1px solid #dddddd;
 }
 
@@ -770,3 +659,375 @@ table.list th {
 .list tbody > tr:nth-child(odd) > td {
   background-color: #f9f9f9;
 }
+
+
+#bimg_container {width: 100%; overflow: hidden; height: 450px;}
+  #bimg_container_inner {position: relative; margin-bottom: 20px; width: 100%;}
+  
+
+    #bimg_subtext {position: absolute; top: 390px; margin: 0 auto; color: #ffffff; }
+    /* #bimg_subtext:hover { left: 45%; } */
+      #bimg_subtext a { background: rgba(0, 0, 0, 0.6); color: #ffffff !important; padding: 10px; font-weight: 300; font-size: 25px; } 
+        #bimg_subtext a span {font-weight: 600; font-size: 13px; }
+    
+    #bimg_uptext { position: absolute; top: 0px; left: 0; width: 100%; color: #ffffff; height: 110px; padding-top: 15px; }
+        .bg_trans {  background: rgba(0, 0, 0, 0.6); height: 83px; }
+      #bimg_uptext ul { list-style: none; padding: 0; margin: 0; padding-top: 5px; }
+        #bimg_uptext li a { color: #fff !important; font-weight: 300; } 
+          #bimg_uptext li a:hover { padding-left: 5px; }
+
+.navbar-default {
+    background-color: #ffffff !important;
+}
+@media (max-width: 979px) {
+    .body-container.logged-in {
+        padding-top: 109px;
+    }
+    .body-container.not-logged-in {
+        padding-top: 59px;
+    }
+    #wiki-outer-body {
+        margin-top: 10px;
+    }
+
+    .mw-headline {
+        margin-top: -103px;
+        padding-top: 103px;
+    }
+
+    .subnav #subnav-select {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    .navbar-form, .navbar-search {
+        margin-bottom: 0;
+    }
+
+    .nabar-inner, .navbar-fixed-top {
+        margin-bottom: 0;
+    }
+
+    .navbar-inner {
+        padding-bottom: 0;
+    }
+
+    #bimg_subtext {
+        top: 340px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 48px;
+
+    }
+    .body-container.logged-in {
+        padding-top: 0;
+    }
+    .body-container.not-logged-in {
+        padding-top: 0;
+    }
+
+    #wiki-outer-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #function-bar-search {
+        width: 50%;
+        padding-top: 5px;
+        padding-left: 8px;
+    }
+    .subnav-collapse {
+        padding-left: 0 !important;
+    }
+    .subnav-collapse a {
+        padding-left: 5px !important;
+    }
+
+    .navbar-form {
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    .navbar-right {
+        margin-left: 5px !important;
+    }
+
+    .container.sub-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .subnav {
+        position: static;
+        top: auto;
+        z-index: auto;
+        width: auto;
+        height: auto;
+        background: #fff; /* whole background property since we use a background-image for gradient */
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .subnav .navbar-toggle {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: none !important;
+        color: #080808 !important;
+    }
+    .subnav ul li a {
+        padding-left: 20px !important;
+    }
+    .subnav .nav > li {
+        float: none;
+    }
+    .subnav .nav > li > a {
+        border: 0;
+
+    }
+    .subnav .nav > li + li > a {
+        border-top: 1px solid #e5e5e5;
+    }
+    .subnav .nav > li:first-child > a,
+    .subnav .nav > li:first-child > a:hover {
+        -webkit-border-radius: 4px 4px 0 0;
+        -moz-border-radius: 4px 4px 0 0;
+        border-radius: 4px 4px 0 0;
+    }
+
+    #bimg_container {
+        height: 500px;
+    }
+    .homepage_image {
+        height: 500px;
+        max-width:inherit !important;
+        margin-left: -22%;
+    }
+}
+
+/* responsive */
+@media (max-width: 480px) {
+
+    #toc {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .jumbotron {
+        padding: 2em;
+    }
+
+    .jumbotron p {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .jumbotron h1 {
+        font-size: 1.5em;
+    }
+
+    .jumbotron pre {
+        display: none;
+    }
+}
+
+@media (max-width: 321px) {
+    #bimg_uptext span {
+        display: none;
+    }
+}
+
+/*Unsorted Styles*/
+    /* Special:ListUsers */
+        a.mw-userlink {
+            display: block;
+            width: 70px;
+            float: left;
+            text-transform: lowercase;
+        }
+
+/*Site*/
+	/* Content Container */
+		/* Sidebar (TOC) */
+			#toc:not(.toc-sidebar) {
+				display: none;
+				float: right;
+				margin: 0 0 1em 1em;
+			}
+
+			#toc td {
+				background: #eee;
+				border: 1px solid #ddd;
+				border-radius: 0.5em;
+				display: block;
+				-moz-border-radius: 0.5em;
+				-webkit-border-radius: 0.5em;
+				padding: 0 1em 1em 1em;
+
+				box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
+			}
+
+			#toc.toc-sidebar td {
+				background: transparent;
+				border: none;
+				box-shadow: none;
+				display: table-cell;
+				padding: 0;
+			}
+
+			#toc.toc-sidebar li {
+				line-height: 20px;
+				list-style-type: none;
+			}
+
+			#toc.toc-sidebar li li {
+				margin-left: 20px;
+			}
+
+			#toc.toc-sidebar h3 { /* "Contents" label */
+				font-size: 1.2em;
+			}
+
+			.toc-sidebar .toctoggle {
+				display: none;
+			}
+
+			#toctitle h2 {
+				font-size: 16px;
+			}
+			.toc-sidebar > ul {
+				min-height: 20px;
+			    padding: 13px 19px 13px 19px;
+			    margin-bottom: 20px;
+			    background-color: #F5F5F5;
+			    border: 1px solid #E3E3E3;
+			    border-radius: 4px;
+			    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+			}
+			
+			.toc-sidebar li ul {
+				padding-left: 0;
+			}
+
+
+#preferences {
+    float: left;
+    width: 100%;
+    margin: -2px 0px 0px;
+    clear: both;
+    border: 1px solid #CCC;
+    background-color: #FAFAFA;
+}
+#preferences fieldset {
+    border-width: 1px medium medium;
+    border-style: solid none none;
+    border-color: #CCC -moz-use-text-color -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+}
+#preferences td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.htmlform-tip {
+    font-size: x-small;
+    padding: 0.2em 2em;
+    color: #666;
+}
+
+
+#preftoc {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0px !important;
+    padding: 0px !important;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAAAAAA90p5jAAAAAnRSTlMAAHaTzTgAAAAgSURBVAhbY2Bg+Mf0HwpBrH9Q8i8TAxDDeAiIUAHVBQDawh8M4pNxOQAAAABJRU5ErkJggg==');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+#preftoc li {
+    float: left;
+    margin: 0px;
+    padding: 0px 1px 0px 0px;
+    height: 2.25em;
+    white-space: nowrap;
+    list-style-type: none;
+    list-style-image: none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAAAAAA90p5jAAAAAnRSTlMAAHaTzTgAAAAgSURBVAhbY2Bg+Mf0HwpBrH9Q8i8TAxDDeAiIUAHVBQDawh8M4pNxOQAAAABJRU5ErkJggg==');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+#preftoc a, #preftoc a:active {
+    display: inline-block;
+    position: relative;
+    color: #0645AD;
+    padding: 0.5em;
+    text-decoration: none;
+    background-image: none;
+    font-size: 0.9em;
+}
+#preftoc li.selected a {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAhCAQAAACysAk0AAAAHElEQVQIW2P6z8DE8J+JgQGKQFwMhCaIn4shCAC27Qc86OAoxwAAAABJRU5ErkJggg==');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Generl Form Styling */
+	fieldset {
+		padding: 10px;
+		margin-bottom: 20px;
+		border: 1px solid #E5E5E5;
+	}
+	fieldset legend {
+		border: none !important;
+		width: inherit;
+		padding: 0 10px 0px 10px;
+		margin: 0;
+	}
+	fieldset input, fieldset select{
+		margin: 0 10px 0 5px;
+	}
+	fieldset div.checkbox {
+		float: left;
+		margin-right: 10px;
+		height: 20px !important;
+		margin-bottom: 0px;
+	}
+	/* No Idea why this is needed. */
+	fieldset:first-child div.checkbox {
+		margin-top: 0px;
+	}
+	fieldset input[type=submit] {
+		clear: left;
+		float: left;
+		margin-top: 15px;
+		margin-left: 0;
+	}
+
+	/* These show up on Special:Preferences. */
+		.mw-htmlform-flatlist-item {
+			height: 25px;
+		}
+		/*Seriously, fuck this themme*/
+		.mw-htmlform-flatlist-item div.checkbox {
+			float: none !important;
+			margin-top: -25px;
+		}
+
+		.mw-input label.checkbox {
+			margin-top: 0;
+		}

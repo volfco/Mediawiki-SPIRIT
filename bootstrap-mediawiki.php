@@ -13,13 +13,29 @@ if ( ! defined( 'MEDIAWIKI' ) ) die( "This is an extension to the MediaWiki pack
 $wgExtensionCredits['skin'][] = array(
 	'path'        => __FILE__,
 	'name'        => 'Bootstrap Mediawiki',
-	'url'         => 'http://borkweb.com',
-	'author'      => '[http://borkweb.com Matthew Batchelder]',
+	'url'         => 'http://rit.volf.co/sg/ritpedia',
+	'author'      => '[http://volf.co Colum McGaley]',
 	'description' => 'MediaWiki skin using Bootstrap 3',
 );
 
 $wgValidSkinNames['bootstrapmediawiki'] = 'BootstrapMediaWiki';
 $wgAutoloadClasses['SkinBootstrapMediaWiki'] = __DIR__ . '/BootstrapMediaWiki.skin.php';
+
+$wgHooks['BeforePageDisplay'][] = function(&$out, &$text){
+    $out->addHeadItem ( 'meta','<link rel="apple-touch-icon" sizes="57x57" href="/SITE_STATIC/apple-touch-icon-57x57.png">' );
+    $out->addHeadItem ( 'meta_1','<link rel="apple-touch-icon" sizes="114x114" href="/SITE_STATIC/apple-touch-icon-114x114.png">' );
+    $out->addHeadItem ( 'meta_2','<link rel="apple-touch-icon" sizes="72x72" href="/SITE_STATIC/apple-touch-icon-72x72.png">' );
+    $out->addHeadItem ( 'meta_3','<link rel="apple-touch-icon" sizes="60x60" href="/SITE_STATIC/apple-touch-icon-60x60.png">' );
+    $out->addHeadItem ( 'meta_4','<link rel="apple-touch-icon" sizes="57x57" href="/SITE_STATIC/apple-touch-icon-57x57.png">' );
+    $out->addHeadItem ( 'meta_5','<link rel="apple-touch-icon" sizes="120x120" href="/SITE_STATIC/apple-touch-icon-120x120.png">' );
+    $out->addHeadItem ( 'meta_6','<link rel="apple-touch-icon" sizes="76x76" href="/SITE_STATIC/apple-touch-icon-76x76.png">' );
+    $out->addHeadItem ( 'meta_7','<link rel="icon" type="image/png" href="/SITE_STATIC/favicon-96x96.png" sizes="96x96">' );
+    $out->addHeadItem ( 'meta_7','<link rel="icon" type="image/png" href="/SITE_STATIC/favicon-16x16.png" sizes="16x16">' );
+    $out->addHeadItem ( 'meta_8','<link rel="icon" type="image/png" href="/SITE_STATIC/favicon-32x32.png" sizes="32x32">' );
+    $out->addHeadItem ( 'meta_9','<meta name="msapplication-TileColor" content="#ffffff">' );
+
+
+};
 
 
 $skinDirParts = explode( DIRECTORY_SEPARATOR, __DIR__ );
