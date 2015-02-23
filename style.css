@@ -2,30 +2,44 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,900);
 
 body {
-	background-color: #eeeeee;
-	/* background-image: url(images/wiki-bg.jpg); */
-	background-repeat: repeat-x;
-	background-position: center 80px;
+	background: #eee url('http://ritpedia.rit.edu/RITpediaBW.svg') no-repeat left bottom;
+    background-size: 40%;
 	color: #222;
-
-    /* Stupid trendy ass font.*/
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13px;
 }
+
+/* Generic Styles */
+a {
+    color: #F36E21;
+}
+a:hover, a:focus {
+    color: #BD4C0A;
+}
+
+.radio, .checkbox {
+    display: inline !important;
+    position: inherit !important;
+}
+
 .body-container.logged-in {
     padding-top: 128px;
 }
 .body-container.not-logged-in {
     padding-top: 80px;
 }
-a {
-	color: #F36E21;
-}
-a:hover, a:focus {
-	color: #BD4C0A;
+
+
+fieldset input[type="submit"] {
+    float: none !important;
 }
 
+/* Prevents the page header from being shown on the main page, and subsite's main page */
 body.page-Main_Page .page-header,
+body.page-Dubai_Main_Page .page-header,
+body.page-Kosovo_Main_Page .page-header,
+body.page-Zagreb_Main_Page .page-header,
+body.page-Dubrovnik_Main_Page .page-header,
 body.page-Category_Oracle .page-header,
 body.page-Category_JavaScript .page-header,
 body.page-Category_HTML .page-header,
@@ -183,7 +197,9 @@ option.unclickable {
 }
 #page-contents .dropdown-menu {
 }
-
+.page-header {
+    margin-top: 20px !important;
+}
 .page-header .nav i {
 	opacity: 0.3;
 }
@@ -305,8 +321,8 @@ img.thumbborder {
 .subnav {
 	background: #eee;
 	border-bottom: 1px solid #f5f5f5;
-  width: 100%;
-  height: 50;
+    width: 100%;
+    height: 50px;
 	margin-top: 2px;
 	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
 	   -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
@@ -676,6 +692,47 @@ th.navbox-title .navbar {
         #bimg_uptext li a { color: #fff !important; font-weight: 300; } 
           #bimg_uptext li a:hover { padding-left: 5px; }
 
+
+  #subschools {
+    font-family: "Source Sans Pro",sans-serif;
+  }
+  #subschools div.row div {
+    
+    height: 100px;
+    border-top: 1px solid white;
+border-right: 1px solid white;
+  margin: 0;
+  padding: 0;
+    overflow: hidden;
+}
+  #subschools div.row div img {
+    margin-top: -30px
+  }
+  #subschools div.row div:hover .subschool_text {
+    height: 40px;
+    margin: 60px 0;
+    padding: 10px 7px;
+    -webkit-transition:height 0.5s, margin 0.25s, transform 0s;
+    transition:height 0.5s, margin 0.25s, transform 0s;
+  }
+  #subschools div.row div .subschool_text {
+    border: none;
+    float:left;
+    position: absolute;
+    top: 0;
+    height: 100px;
+      width:100%;
+    background: rgba(0, 0, 0, 0.50);
+    margin: 0px 0;
+    padding: 60px 7px;
+    font-size: 20px;
+    transition:height 1s, margin 0.25s, transform 0s;
+  }
+  #subschools div.row div .subschool_text a {
+    color: white !important;
+  }
+
+
 .navbar-default {
     background-color: #ffffff !important;
 }
@@ -916,6 +973,23 @@ th.navbox-title .navbar {
 			.toc-sidebar li ul {
 				padding-left: 0;
 			}
+        /* Main Content (With Sidebar) */
+            .wiki-body-section  {
+                background: #ffffff;
+                border: 1px solid #E7E7E7;
+            }
+            .wiki-body-section.col-md-9 {
+                margin-top: 22px !important;
+            }
+            /* Do not show a background on the main page */
+            .page-Main_Page .wiki-body-section, 
+	        .page-Dubrovnik_Main_Page .wiki-body-section,
+	        .page-Zagreb_Main_Page .wiki-body-section,
+	        .page-Kosovo_Main_Page .wiki-body-section,
+	        .page-Dubai_Main_Page .wiki-body-section  {
+                background: none !important;
+                border: none !important;
+            }
 
 
 #preferences {
@@ -1002,10 +1076,7 @@ th.navbox-title .navbar {
 		margin: 0 10px 0 5px;
 	}
 	fieldset div.checkbox {
-		float: left;
-		margin-right: 10px;
-		height: 20px !important;
-		margin-bottom: 0px;
+		display: inline !important;
 	}
 	/* No Idea why this is needed. */
 	fieldset:first-child div.checkbox {
