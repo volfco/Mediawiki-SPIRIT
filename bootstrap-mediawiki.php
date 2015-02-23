@@ -12,8 +12,8 @@ if ( ! defined( 'MEDIAWIKI' ) ) die( "This is an extension to the MediaWiki pack
 
 $wgExtensionCredits['skin'][] = array(
 	'path'        => __FILE__,
-	'name'        => 'Bootstrap Mediawiki',
-	'url'         => 'http://rit.volf.co/sg/ritpedia',
+	'name'        => 'SPIRIT',
+	'url'         => 'http://volf.co/projects/ritpedia',
 	'author'      => '[http://volf.co Colum McGaley]',
 	'description' => 'MediaWiki skin using Bootstrap 3',
 );
