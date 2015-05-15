@@ -1,10 +1,6 @@
-# Bootstrap Mediawiki
+# RITpedia
 
-This is a MediaWiki skin that uses Bootstrap 3 from Twitter!  The framework gives a boatload of features that play really nicely with a MediaWiki installation.  To get up and rolling, there's a few things that should be done.
-
-If you'd like to see one of these in the wild, check out the [EotL Wiki](http://eotl.borkweb.com).
-
-![Screenshot](https://raw.githubusercontent.com/borkweb/bootstrap-mediawiki/master/images/bootstrap-mediawiki-screenshot.png)
+This is the RITpedia MediaWiki theme.
 
 ## Installation
 First, clone the repository into your `skins/` directory.
@@ -86,46 +82,70 @@ You can name the category whatever you want, of course. Do not change the format
 
 The Bootstrap:Subnav page follow the same syntax as does the Bootstrap:TitleBar page. As the name already suggests, it will create a sub-navigation bar under the title bar.
 
-#### Create: Template:Alert
-This template is used to leverage Bootstrap's alert box:
-
-```html
-<div class="alert {{{2}}}"><strong>Heads Up!</strong> {{{1}}}</div>
+#### Built in Templates: Homepage Big Box
 ```
+__NOTOC__
+<div id="bimg_container">
+ 	<!-- Note. Make sure you use tabs, not spaces. Spaces will invoke the syntax highlighter  -->
+	<!-- Here is a tab for you "	" -->
+	<div id="bimg_container_inner" class="image">
+			[[Student_Government | <img class="homepage_image" src="{{filepath:SG_Office.jpg}}" alt="" style="width:1140px;min-height:100%;"/>]]
+		<div id="bimg_subtext" class="container">
+			[[Student_Government | RIT Student Government <span>Be Great.</span>]]
+		</div>
 
-Usage:
-```
-{{alert|Message you want to say|alert-danger}}
-```
+		<div id="bimg_uptext" class="container">
+			<div class="row">
+				<div class="bg_trans col-md-6 col-lg-6 col-sm-6" style="padding-left: 25px; padding-top: 10px; font-weight: 400; font-size: 23px;">
+					Welcome to [[RITpedia]]. <br /><span style="font-size:65%;"> a guide to [[RIT]]. Serving [[Special:Statistics|{{NUMBEROFARTICLES}}]] articles.</span>
+				</div>
+				<div class="bg_trans col-md-2 col-lg-2 col-sm-2">
+					<ul style="list-style: none; padding: 0; margin: 0; padding-top: 5px;">
+						<li>[[Academics]]</li>
+						<li>[[Culture]]</li>
+						<li>[[Places]]</li>
+					</ul>
+				</div>
+				<div class="bg_trans col-md-2 col-lg-2 col-sm-2">
+					<ul style="list-style: none; padding: 0; margin: 0; padding-top: 5px;">
+						<li> [[History]]</li>
+						<li>[[People]]</li>
+						<li> [[Projects]]</li>
+					</ul>
+				</div>
+				<div class="bg_trans col-md-2 col-lg-2 col-sm-2">
+					<ul style="list-style: none; padding: 0; margin: 0; padding-top: 5px;">
+						<li>[[Campus Directory|Directory]]</li>
+						<li>[[Media]]</li>
+						<li>[[Student Life]]</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="subschools" style="padding-left: 15px; padding-right: 15px; margin-bottom: 20px;">
+<div class="row">
+	<!-- # 12 / 4 = 3-->
+	<div class="bg_trans col-md-3 col-lg-3 col-sm-3">
+		[[Dubai:Main_Page | <img class="homepage_sub_image" src="{{filepath:Dubai Wiki.jpg}}" alt="" style="max-width:100%;min-height:100%;"/>]]
+<div class="subschool_text">[[Dubai:Main_Page | Dubai, UAE]]</div>
+	</div>
+	<div class="bg_trans col-md-3 col-lg-3 col-sm-3">
+		[[Kosovo:Main_Page | <img class="homepage_sub_image" src="http://placehold.it/285x140" alt="" style="max-width:100%;min-height:100%;"/>]]
+		<div class="subschool_text">[[Kosovo:Main_Page | Kosovo]]</div>
+	</div>
+	<div class="bg_trans col-md-3 col-lg-3 col-sm-3">
+		[[Zagreb:Main_Page | <img class="homepage_sub_image" src="{{filepath:RIT_Zagreb_WIKI.jpg}}" alt="" style="max-width:100%;min-height:100%;"/>]]
+		<div class="subschool_text">[[Zagreb:Main_Page | Zagreb, Croatia ]]</div>
+	</div>
+	<div class="bg_trans col-md-3 col-lg-3 col-sm-3">
+		[[Dubrovnik:Main_Page | <img class="homepage_sub_image" src="{{filepath:RIT_Dubrovnik_CSDEPT.jpg}}" alt="" style="max-width:100%;min-height:100%;"/>]]
+		<div class="subschool_text">[[Dubrovnik:Main_Page | Dubrovnik, Croatia]]</div>
+	</div>
 
-#### Create: Template:Tip
-This template is used to do Bootstrap tooltips!
+</div>
+</div>
 
-```html
-<span title="{{{2}}}" class="tip" rel="tooltip">{{{1}}}</span>
-```
 
-Usage:
-
-```
-{{tip|Something|This is the tooltip!}}
-```
-
-or
-
-```
-{{tip|[[Bacon]]|Delicious snack}}
-```
-
-#### Create: Template:Pop
-This template is used to do Bootstrap popovers!
-
-```html
-<span title="{{{2}}}" data-content="{{{3}}}" data-toggle="popover">{{{1}}}</span>
-```
-
-Usage:
-
-```
-{{pop|Whatever triggers the popover|Popover Title|Popover Content}}
 ```
