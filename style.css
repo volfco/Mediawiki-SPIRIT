@@ -1,741 +1,743 @@
+/*
+	Import the Source Sans Pro font. We use it as the base front
 
+	TODO Make this a local include. I don't like using 3rd party services
+*/
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,900);
 
-body {
-	background: #eee url('http://ritpedia.rit.edu/RITpediaBW.svg') no-repeat left bottom;
-    background-size: 40%;
-	color: #222;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 13px;
-}
-
-/* Generic Styles */
-a {
-    color: #F36E21;
-}
-a:hover, a:focus {
-    color: #BD4C0A;
-}
-
-.radio, .checkbox {
-    display: inline !important;
-    position: inherit !important;
-}
-
-.body-container.logged-in {
-    padding-top: 128px;
-}
-.body-container.not-logged-in {
-    padding-top: 80px;
-}
-
-
-fieldset input[type="submit"] {
-    float: none !important;
-}
-
-/* Prevents the page header from being shown on the main page, and subsite's main page */
-body.page-Main_Page .page-header,
-body.page-Dubai_Main_Page .page-header,
-body.page-Kosovo_Main_Page .page-header,
-body.page-Zagreb_Main_Page .page-header,
-body.page-Dubrovnik_Main_Page .page-header,
-body.page-Category_Oracle .page-header,
-body.page-Category_JavaScript .page-header,
-body.page-Category_HTML .page-header,
-body.page-Category_PHP .page-header,
-body.page-Category_PL_SQL .page-header,
-body.page-Category_CSS .page-header { display: none; }
-
-textarea {
-	width: 95%;
-}
-
-.category-links {
-	clear: both;
-}
-
-.mw-headline {
-	text-shadow: 1px 1px 0 rgb(255,255,255);
-}
-
-h2 .mw-headline { font-size: 18px; }
-h3 .mw-headline { font-size: 16px; }
-h4 .mw-headline { font-size: 14px; }
-h5 .mw-headline { font-size: 12px; }
-h6 .mw-headline { font-size: 12px; }
-
-p {
-	margin-bottom: 15px;
-}
-
-.mw-content-ltr ul, .mw-content-ltr ol {
-	margin-bottom: 9px;;
-}
-.navbar-brand {
-    padding-top: 10px !important;
-}
-.navbar-brand img {
-	margin-right: 0.5em;
-	max-height: 30px;
-}
-
-.navbar input {
-	background-color: #555;
-	border-color: #111;
-	color: #aaa;
-	margin-bottom: 0;
-}
-
-.navbar .navbar-inner .btn {
-	margin-top: 0;
-}
-
-.nav > li > a {
-	padding: 15px;
-}
-
-.editsection {
-	float: right;
-	font-size: 0.8rem;
-	opacity: 0.2;
-}
-
-.editOptions .checkbox input:first-child {
-	margin-left: -20px;
-}
-
-.jumbotron {
-	position: relative;
-}
-
-.jumbotron h1 img {
-	border: 1px solid #eee;
-	-webkit-box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
-	-moz-box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
-	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
-	position: relative;
-	top: -6px;
-}
-
-.jumbotron .nav-pills {
-	opacity: 0.2;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-}
-
-.jumbotron .nav-pills:hover {
-	opacity: 0.8;
-}
-
-h2:hover .editsection,
-h3:hover .editsection,
-h4:hover .editsection,
-h5:hover .editsection,
-h6:hover .editsection {
-	opacity: 1;
-}
-
-option.unclickable {
-	color: #ccc;
-}
-
-
-
-.nav .user-icon {
-	border: 1px solid rgba( 55, 55, 55, 0.1 );
-	display: inline-block;
-	margin-right: 0.5em;
-	vertical-align: middle;
-	width: 20px;
-	height: 20px;
-}
-
-.nav .user-icon img {
-	border: 1px solid rgba( 0, 0, 0, 0.5 );
-	width: 20px;
-	height: 20px;
-}
-
-#wiki-body h2 {
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 0.5em;
-}
-
-#wiki-body h3 {
-	border-bottom: 1px dotted #eee;
-	color: #555;
-	margin-bottom: 0.5em;
-}
-
-#wiki-body li {
-	margin-bottom: 5px;
-}
-
-#mw-content-text .center {
-	text-align: center;
-}
-
-#mw-content-text .floatright {
-	margin-left: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
-#mw-content-text .floatleft {
-	margin-right: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
-#page-contents ul li { list-style: none; }
-#page-contents .dropdown-menu {
-	left: auto;
-	max-height: 400px;
-	overflow: scroll;
-	overflow-y: scroll;
-	right: 0;
-}
-#page-contents .dropdown-menu {
-}
-.page-header {
-    margin-top: 20px !important;
-}
-.page-header .nav i {
-	opacity: 0.3;
-}
-
-.nav-collapse.in {
-	height: auto !important;
-}
-
-
-
-a.new {
-	color: #86100f;
-}
-
-#catlinks {
-	border-top: 1px dotted #eee;
-	margin-top: 2em;
-	padding: 1em 0;
-}
-
-#catlinks #mw-normal-catlinks > a {
-	color: #999;
-}
-
-#catlinks li {
-	border-left: 1px solid #ddd;
-}
-
-#catlinks li:first-child {
-	border-left: none;
-}
-
-.bottom {
-	background: #333;
-	margin-top: 3em;
-	padding-bottom: 2em;
-}
-
-.bottom .mw-editsection {
-	display: none;
-}
-
-.bottom footer {
-	color: #999;
-	margin-top: 2em;
-}
-
-.printfooter { display: none;}
-
-/* thumb, copied from vector */
-div.thumb {
-	margin-bottom: .5em;
-	width: auto;
-	background-color: transparent;
-}
-div.thumbinner {
-	border: 1px solid #ccc;
-	padding: 3px !important;
-	background-color: #f9f9f9;
-	font-size: 94%;
-	text-align: center;
-	overflow: hidden;
-}
-html .thumbimage {
-	border: 1px solid #ccc;
-}
-html .thumbcaption {
-	border: none;
-	text-align: left;
-	line-height: 1.4em;
-	padding: 3px !important;
-	font-size: 94%;
-}
-div.magnify {
-	float: right;
-	border: none !important;
-	background: none !important;
-}
-div.magnify a, div.magnify img {
-	display: block;
-	border: none !important;
-	background: none !important;
-}
-/* @noflip */
-div.tright {
-	clear: right;
-	float: right;
-	margin: .5em 0 1.3em 1.4em;
-}
-/* @noflip */
-div.tleft {
-	float: left;
-	clear: left;
-	margin: .5em 1.4em 1.3em 0;
-}
-img.thumbborder {
-	border: 1px solid #dddddd;
-}
-
-.brand img {
-	margin-top: -5px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.navbar-fixed-top .navbar-inner {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-
-.navbar input {
-	background-color: #f5f5f5;
-	border-color: #ccc;
-	color: #333;
-}
-
-/* Subnav */
-.subnav {
-	background: #eee;
-	border-bottom: 1px solid #f5f5f5;
-    width: 100%;
-    height: 50px;
-	margin-top: 2px;
-	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	   -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	        box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	border-color: #d5d5d5;
-	border-width: 0 0 1px;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-
-
-.subnav .container .nav {
-  margin-bottom: 0;
-}
-
-.subnav .nav > li > a {
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-	text-decoration: none;
-	color: #333;
-  margin: 0;
-  padding-top:    16px;
-  padding-bottom: 16px;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-}
-
-.subnav .nav > li > a:hover,
-.subnav .nav > .active > a,
-.subnav .nav > .active > a:hover {
-  color: #333;
-  background-color: #ddd;
-  border-right-color: transparent;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-     -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-          box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-}
-.subnav .nav-tabs .dropdown-toggle .caret, 
-.subnav .nav-pills .dropdown-toggle .caret {
-	border-top-color: #000;
-}
-
-.subnav .nav > .active > a .caret,
-.subnav .nav > .active > a:hover .caret {
-  border-top-color: #000;
-}
-.subnav .nav > li:first-child > a,
-.subnav .nav > li:first-child > a:hover {
-  border-left: 0;
-  padding-left: 12px;
-  -webkit-border-radius: 4px 0 0 4px;
-     -moz-border-radius: 4px 0 0 4px;
-          border-radius: 4px 0 0 4px;
-}
-.subnav .nav > li:last-child > a {
-  border-right: 0;
-}
-.subnav .dropdown-menu {
-  -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
-}
-
-.subnav .nav-tabs .open .dropdown-toggle, 
-.subnav .nav-pills .open .dropdown-toggle, 
-.subnav .nav > .open.active > a:hover {
-	color: #333;
-	background-color: #ddd;
-	border-color: #ddd;
-}
-
-pre.linenums ol {
-	margin-bottom: 0;
-}
-
-#wiki-outer-body {
-	/*background: url(images/body-bg.png) center top repeat-y;*/
-}
-
-/* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
-.subnav-fixed {
-	position: fixed;
-	top: 48px;
-	left: 0;
-	right: 0;
-	z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
-	border-color: #d5d5d5;
-	border-width: 0 0 1px; /* drop the border on the fixed edges */
-	-webkit-border-radius: 0;
-		 -moz-border-radius: 0;
-					border-radius: 0;
-}
-.subnav-fixed .nav {
-	/* width: 1170px; */
-	margin: 0 auto;
-	margin-left: -12px;
-	padding: 0 1px;
-}
-.subnav .nav > li:first-child > a,
-.subnav .nav > li:first-child > a:hover {
-	-webkit-border-radius: 0;
-		 -moz-border-radius: 0;
-					border-radius: 0;
-}
-
-
-
-
-/* Tables */
-table.list th {
-	background: #eee;
-}
-th.navbox-title .navbar {
-    min-height: 0px !important;
-}
-
-
-
-
-.info-box {
-	clear: right;
-	color: #000;
-	background-color: #ccc;
-	border-spacing: 0;
-	border: 1px solid #999;
-	-webkit-border-top-left-radius: 4px;
-	   -moz-border-radius-topleft: 4px;
-	        border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	   -moz-border-radius-topright: 4px;
-	        border-top-right-radius: 4px;
-	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.2 );
-	font-size: 14px;
-	margin-top: -1.4em;
-	margin: 0 0 1em 1em;
-	padding: 3px;
-	padding: 0;
-	position: relative;
-	width: 250px;
-	z-index: 100;
-}
-
-.info-box td {
-	line-height: normal;
-	padding: 5px;
-	vertical-align: middle;
-}
-
-.info-box td p {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.info-box .info-image {
-	background: #eee;
-	border-top: 1px solid #999;
-	border-right: 1px solid #999;
-	color: #000;
-	font-size: smaller;
-	text-align: center;
-}
-
-.info-box .info-name {
-	background-color: #eee;
-	border-top: 1px solid #999;
-	border-left: #999;
-	border-right: #999;
-	color: #000;
-	font-size: larger;
-	font-variant: small-caps;
-	text-align: center;
-}
-
-.info-box .info {
-	background-color: #ccc;
-	border-top: 1px solid #999;
-	color: #000;
-	font-size: 8pt;
-	text-align: center;
-}
-
-.info-box .info-label {
-	background: #eee;
-	padding-left: 6px;
-	padding-right: 6px;
-	border-top: 1px solid #999;
-	border-right: 1px solid #999;
-	color: #000;
-	font-size: smaller;
-	line-height: normal;
-}
-
-.info-box .info-value {
-	background: #fff;
-	padding-left: 6px;
-	padding-right: 6px;
-	border-top: 1px solid #999;
-	color: #000;
-	font-size: smaller;
-}
-
-.info-box.quest .info-name {
-	background-color: #CECF86;
-	border-color: #8A895F;
-}
-
-.info-box.weapon .info-name {
-	background-color: #e8c5c5;
-}
-
-.list {
-  width: auto;
-  margin-bottom: 20px;
-}
-
-.list th,
-.list td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  border-top: 1px solid #dddddd;
-}
-
-.list th {
-  font-weight: bold;
-}
-
-.list thead th {
-  vertical-align: bottom;
-}
-
-.list caption + thead tr:first-child th,
-.list caption + thead tr:first-child td,
-.list colgroup + thead tr:first-child th,
-.list colgroup + thead tr:first-child td,
-.list thead:first-child tr:first-child th,
-.list thead:first-child tr:first-child td {
-  border-top: 0;
-}
-
-.list tbody + tbody {
-  border-top: 2px solid #dddddd;
-}
-
-.list .list {
-  background-color: #ffffff;
-}
-
-.list {
-  border: 1px solid #dddddd;
-  border-collapse: separate;
-  *border-collapse: collapse;
-  border-left: 0;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-
-.list th,
-.list td {
-  border-left: 1px solid #dddddd;
-}
-
-.list caption + thead tr:first-child th,
-.list caption + tbody tr:first-child th,
-.list caption + tbody tr:first-child td,
-.list colgroup + thead tr:first-child th,
-.list colgroup + tbody tr:first-child th,
-.list colgroup + tbody tr:first-child td,
-.list thead:first-child tr:first-child th,
-.list tbody:first-child tr:first-child th,
-.list tbody:first-child tr:first-child td {
-  border-top: 0;
-}
-
-.list thead:first-child tr:first-child > th:first-child,
-.list tbody:first-child tr:first-child > td:first-child,
-.list tbody:first-child tr:first-child > th:first-child {
-  -webkit-border-top-left-radius: 4px;
-          border-top-left-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-}
-
-.list thead:first-child tr:first-child > th:last-child,
-.list tbody:first-child tr:first-child > td:last-child,
-.list tbody:first-child tr:first-child > th:last-child {
-  -webkit-border-top-right-radius: 4px;
-          border-top-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-}
-
-.list thead:last-child tr:last-child > th:first-child,
-.list tbody:last-child tr:last-child > td:first-child,
-.list tbody:last-child tr:last-child > th:first-child,
-.list tfoot:last-child tr:last-child > td:first-child,
-.list tfoot:last-child tr:last-child > th:first-child {
-  -webkit-border-bottom-left-radius: 4px;
-          border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-}
-
-.list thead:last-child tr:last-child > th:last-child,
-.list tbody:last-child tr:last-child > td:last-child,
-.list tbody:last-child tr:last-child > th:last-child,
-.list tfoot:last-child tr:last-child > td:last-child,
-.list tfoot:last-child tr:last-child > th:last-child {
-  -webkit-border-bottom-right-radius: 4px;
-          border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-}
-
-.list tfoot + tbody:last-child tr:last-child td:first-child {
-  -webkit-border-bottom-left-radius: 0;
-          border-bottom-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-}
-
-.list tfoot + tbody:last-child tr:last-child td:last-child {
-  -webkit-border-bottom-right-radius: 0;
-          border-bottom-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-}
-
-.list caption + thead tr:first-child th:first-child,
-.list caption + tbody tr:first-child td:first-child,
-.list colgroup + thead tr:first-child th:first-child,
-.list colgroup + tbody tr:first-child td:first-child {
-  -webkit-border-top-left-radius: 4px;
-          border-top-left-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-}
-
-.list caption + thead tr:first-child th:last-child,
-.list caption + tbody tr:first-child td:last-child,
-.list colgroup + thead tr:first-child th:last-child,
-.list colgroup + tbody tr:first-child td:last-child {
-  -webkit-border-top-right-radius: 4px;
-          border-top-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-}
-
-.list tbody > tr:nth-child(even) > td {
-  background-color: #fff;
-}
-
-.list tbody > tr:nth-child(odd) > td {
-  background-color: #f9f9f9;
-}
-
-
-#bimg_container {width: 100%; overflow: hidden; height: 450px;}
-  #bimg_container_inner {position: relative; margin-bottom: 20px; width: 100%;}
-  
-
-    #bimg_subtext {position: absolute; top: 390px; margin: 0 auto; color: #ffffff; }
-    /* #bimg_subtext:hover { left: 45%; } */
-      #bimg_subtext a { background: rgba(0, 0, 0, 0.6); color: #ffffff !important; padding: 10px; font-weight: 300; font-size: 25px; } 
-        #bimg_subtext a span {font-weight: 600; font-size: 13px; }
-    
-    #bimg_uptext { position: absolute; top: 0px; left: 0; width: 100%; color: #ffffff; height: 110px; padding-top: 15px; }
-        .bg_trans {  background: rgba(0, 0, 0, 0.6); height: 83px; }
-      #bimg_uptext ul { list-style: none; padding: 0; margin: 0; padding-top: 5px; }
-        #bimg_uptext li a { color: #fff !important; font-weight: 300; } 
-          #bimg_uptext li a:hover { padding-left: 5px; }
-
-
-  #subschools {
-    font-family: "Source Sans Pro",sans-serif;
-  }
-  #subschools div.row div {
-    
-    height: 100px;
-    border-top: 1px solid white;
-border-right: 1px solid white;
-  margin: 0;
-  padding: 0;
-    overflow: hidden;
-}
-  #subschools div.row div img {
-    margin-top: -30px
-  }
-  #subschools div.row div:hover .subschool_text {
-    height: 40px;
-    margin: 60px 0;
-    padding: 10px 7px;
-    -webkit-transition:height 0.5s, margin 0.25s, transform 0s;
-    transition:height 0.5s, margin 0.25s, transform 0s;
-  }
-  #subschools div.row div .subschool_text {
-    border: none;
-    float:left;
-    position: absolute;
-    top: 0;
-    height: 100px;
-      width:100%;
-    background: rgba(0, 0, 0, 0.50);
-    margin: 0px 0;
-    padding: 60px 7px;
-    font-size: 20px;
-    transition:height 1s, margin 0.25s, transform 0s;
-  }
-  #subschools div.row div .subschool_text a {
-    color: white !important;
-  }
-
-
-.navbar-default {
-    background-color: #ffffff !important;
-}
+/*
+	Global Styles.
+*/
+
+	body {
+		background: #eee url('images/logo/RITpedia-logo-bw.svg') no-repeat left bottom;
+		background-size: 40%;
+		color: #222;
+		font: 13px 'Source Sans Pro', sans-serif;
+	}
+
+	a {
+	    color: #F36E21;
+	}
+		a:hover, a:focus {
+		    color: #BD4C0A;
+		}
+
+	.radio, .checkbox {
+	    display: inline !important;
+	    position: inherit !important;
+	}
+
+	/* When the user is logged in, they get the subbar. So, we have to adjust the body padding */
+	.body-container.logged-in {
+	    padding-top: 128px;
+	}
+	.body-container.not-logged-in {
+	    padding-top: 80px;
+	}
+
+
+	fieldset input[type="submit"] {
+	    float: none !important;
+	}
+
+	textarea {
+		width: 95%;
+	}
+
+	.category-links {
+		clear: both;
+	}
+
+	fieldset {
+		padding: 10px;
+		margin-bottom: 20px;
+		border: 1px solid #E5E5E5;
+	}
+	fieldset legend {
+		border: none !important;
+		width: inherit;
+		padding: 0 10px 0px 10px;
+		margin: 0;
+	}
+	fieldset input, fieldset select{
+		margin: 0 10px 0 5px;
+	}
+	fieldset div.checkbox {
+		display: inline !important;
+	}
+	/* No Idea why this is needed. */
+	fieldset:first-child div.checkbox {
+		margin-top: 0px;
+	}
+	fieldset input[type=submit] {
+		clear: left;
+		float: left;
+		margin-top: 15px;
+		margin-left: 0;
+	}
+
+	p {
+		margin-bottom: 15px;
+	}
+	/* Special styling for the forms on Special:Preferences. */
+		.mw-htmlform-flatlist-item {
+			height: 25px;
+		}
+		/*Seriously, fuck this themme*/
+		.mw-htmlform-flatlist-item div.checkbox {
+			float: none !important;
+			margin-top: -25px;
+		}
+
+		.mw-input label.checkbox {
+			margin-top: 0;
+		}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ 	Nav Bar Styles
+ */
+	/* Primary Navigation */
+	.navbar input {
+		background-color: #555;
+		border-color: #111;
+		color: #aaa;
+		margin-bottom: 0;
+	}
+
+	.navbar .navbar-inner .btn {
+		margin-top: 0;
+	}
+
+	.navbar-fixed-top .navbar-inner {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.navbar input {
+		background-color: #f5f5f5;
+		border-color: #ccc;
+		color: #333;
+	}
+
+	/* Subnav */
+	/* I think this falls apart on IE, but IE is dead. So, I don't care */
+	.subnav {
+		background: #eee;
+		border-bottom: 1px solid #f5f5f5;
+		width: 100%;
+		height: 50px;
+		margin-top: 2px;
+		-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+		   -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+		        box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+		border-color: #d5d5d5;
+		border-width: 0 0 1px;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	}
+
+
+	.subnav .container .nav {
+	  margin-bottom: 0;
+	}
+
+	.subnav .nav > li > a {
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+		text-decoration: none;
+		color: #333;
+	  margin: 0;
+	  padding-top:    16px;
+	  padding-bottom: 16px;
+	  border-left: 1px solid transparent;
+	  border-right: 1px solid transparent;
+	  -webkit-border-radius: 0;
+	     -moz-border-radius: 0;
+	          border-radius: 0;
+	}
+
+	.subnav .nav > li > a:hover,
+	.subnav .nav > .active > a,
+	.subnav .nav > .active > a:hover {
+	  color: #333;
+	  background-color: #ddd;
+	  border-right-color: transparent;
+	  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+	     -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+	          box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+	}
+	.subnav .nav-tabs .dropdown-toggle .caret,
+	.subnav .nav-pills .dropdown-toggle .caret {
+		border-top-color: #000;
+	}
+
+	.subnav .nav > .active > a .caret,
+	.subnav .nav > .active > a:hover .caret {
+	  border-top-color: #000;
+	}
+	.subnav .nav > li:first-child > a,
+	.subnav .nav > li:first-child > a:hover {
+	  border-left: 0;
+	  padding-left: 12px;
+	  -webkit-border-radius: 4px 0 0 4px;
+	     -moz-border-radius: 4px 0 0 4px;
+	          border-radius: 4px 0 0 4px;
+	}
+	.subnav .nav > li:last-child > a {
+	  border-right: 0;
+	}
+	.subnav .dropdown-menu {
+	  -webkit-border-radius: 0 0 4px 4px;
+	     -moz-border-radius: 0 0 4px 4px;
+	          border-radius: 0 0 4px 4px;
+	}
+
+	.subnav .nav-tabs .open .dropdown-toggle,
+	.subnav .nav-pills .open .dropdown-toggle,
+	.subnav .nav > .open.active > a:hover {
+		color: #333;
+		background-color: #ddd;
+		border-color: #ddd;
+	}
+
+	/* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
+	.subnav-fixed {
+		position: fixed;
+		top: 48px;
+		left: 0;
+		right: 0;
+		z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+		border-color: #d5d5d5;
+		border-width: 0 0 1px; /* drop the border on the fixed edges */
+		-webkit-border-radius: 0;
+			 -moz-border-radius: 0;
+						border-radius: 0;
+	}
+	.subnav-fixed .nav {
+		/* width: 1170px; */
+		margin: 0 auto;
+		margin-left: -12px;
+		padding: 0 1px;
+	}
+	.subnav .nav > li:first-child > a,
+	.subnav .nav > li:first-child > a:hover {
+		-webkit-border-radius: 0;
+			 -moz-border-radius: 0;
+						border-radius: 0;
+	}
+
+
+/*
+	Content
+ */
+
+	/*
+		Sidebar (TOC). We can disable it in the Wiki by adding __NOTOC__ to the
+		top of the page
+	 */
+		#toc:not(.toc-sidebar) {
+			display: none;
+			float: right;
+			margin: 0 0 1em 1em;
+		}
+
+		#toc td {
+			background: #eee;
+			border: 1px solid #ddd;
+			border-radius: 0.5em;
+			display: block;
+			-moz-border-radius: 0.5em;
+			-webkit-border-radius: 0.5em;
+			padding: 0 1em 1em 1em;
+
+			box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
+		}
+
+		#toc.toc-sidebar td {
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			display: table-cell;
+			padding: 0;
+		}
+
+		#toc.toc-sidebar li {
+			line-height: 20px;
+			list-style-type: none;
+		}
+
+		#toc.toc-sidebar li li {
+			margin-left: 20px;
+		}
+
+		#toc.toc-sidebar h3 { /* "Contents" label */
+			font-size: 1.2em;
+		}
+
+		.toc-sidebar .toctoggle {
+			display: none;
+		}
+
+		#toctitle h2 {
+			font-size: 16px;
+		}
+		.toc-sidebar > ul {
+			min-height: 20px;
+				padding: 13px 19px 13px 19px;
+				margin-bottom: 20px;
+				background-color: #F5F5F5;
+				border: 1px solid #E3E3E3;
+				border-radius: 4px;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+		}
+
+		.toc-sidebar li ul {
+			padding-left: 0;
+		}
+			/* Main Content (With Sidebar) */
+					.wiki-body-section  {
+							background: #ffffff;
+							border: 1px solid #E7E7E7;
+					}
+					.wiki-body-section.col-md-9 {
+							margin-top: 22px !important;
+					}
+					/* Do not show a background on the main page */
+					.page-Main_Page .wiki-body-section  {
+							background: none !important;
+							border: none !important;
+					}
+	/* Main Content */
+		.mw-headline {
+			text-shadow: 1px 1px 0 rgb(255,255,255);
+		}
+
+		h2 .mw-headline { font-size: 18px; }
+		h3 .mw-headline { font-size: 16px; }
+		h4 .mw-headline { font-size: 14px; }
+		h5 .mw-headline { font-size: 12px; }
+		h6 .mw-headline { font-size: 12px; }
+
+		h2:hover .editsection, h3:hover .editsection, h4:hover .editsection,
+		h5:hover .editsection, h6:hover .editsection {
+			opacity: 1;
+		}
+
+		.mw-content-ltr ul, .mw-content-ltr ol {
+			margin-bottom: 9px;;
+		}
+		.navbar-brand {
+		    padding-top: 10px !important;
+		}
+		.navbar-brand img {
+			margin-right: 0.5em;
+			max-height: 30px;
+		}
+
+		#wiki-body h2 {
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 0.5em;
+		}
+
+		#wiki-body h3 {
+			border-bottom: 1px dotted #eee;
+			color: #555;
+			margin-bottom: 0.5em;
+		}
+
+		#wiki-body li {
+			margin-bottom: 5px;
+		}
+
+		#mw-content-text .center {
+			text-align: center;
+		}
+
+		#mw-content-text .floatright {
+			margin-left: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		#mw-content-text .floatleft {
+			margin-right: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		#page-contents ul li { list-style: none; }
+		#page-contents .dropdown-menu {
+			left: auto;
+			max-height: 400px;
+			overflow: scroll;
+			overflow-y: scroll;
+			right: 0;
+		}
+		#page-contents .dropdown-menu {
+		}
+		.page-header {
+		    margin-top: 20px !important;
+		}
+		.page-header .nav i {
+			opacity: 0.3;
+		}
+
+		.nav-collapse.in {
+			height: auto !important;
+		}
+
+		/*
+			Sidebar + Inline elements
+		 */
+			.info-box {
+				clear: right;
+				color: #000;
+				background-color: #ccc;
+				border-spacing: 0;
+				border: 1px solid #999;
+				-webkit-border-top-left-radius: 4px;
+						-moz-border-radius-topleft: 4px;
+								border-top-left-radius: 4px;
+				-webkit-border-top-right-radius: 4px;
+						-moz-border-radius-topright: 4px;
+								border-top-right-radius: 4px;
+				box-shadow: 0 0 5px rgba( 0, 0, 0, 0.2 );
+				font-size: 14px;
+				margin-top: -1.4em;
+				margin: 0 0 1em 1em;
+				padding: 3px;
+				padding: 0;
+				position: relative;
+				width: 250px;
+				z-index: 100;
+			}
+
+			.info-box td {
+				line-height: normal;
+				padding: 5px;
+				vertical-align: middle;
+			}
+
+			.info-box td p {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.info-box .info-image {
+				background: #eee;
+				border-top: 1px solid #999;
+				border-right: 1px solid #999;
+				color: #000;
+				font-size: smaller;
+				text-align: center;
+			}
+
+			.info-box .info-name {
+				background-color: #eee;
+				border-top: 1px solid #999;
+				border-left: #999;
+				border-right: #999;
+				color: #000;
+				font-size: larger;
+				font-variant: small-caps;
+				text-align: center;
+			}
+
+			.info-box .info {
+				background-color: #ccc;
+				border-top: 1px solid #999;
+				color: #000;
+				font-size: 8pt;
+				text-align: center;
+			}
+
+			.info-box .info-label {
+				background: #eee;
+				padding-left: 6px;
+				padding-right: 6px;
+				border-top: 1px solid #999;
+				border-right: 1px solid #999;
+				color: #000;
+				font-size: smaller;
+				line-height: normal;
+			}
+
+			.info-box .info-value {
+				background: #fff;
+				padding-left: 6px;
+				padding-right: 6px;
+				border-top: 1px solid #999;
+				color: #000;
+				font-size: smaller;
+			}
+
+			.info-box.quest .info-name {
+				background-color: #CECF86;
+				border-color: #8A895F;
+			}
+
+			.info-box.weapon .info-name {
+				background-color: #e8c5c5;
+			}
+			.list {
+			  width: auto;
+			  margin-bottom: 20px;
+			}
+
+			.list th,
+			.list td {
+			  padding: 8px;
+			  line-height: 20px;
+			  text-align: left;
+			  border-top: 1px solid #dddddd;
+			}
+
+			.list th {
+			  font-weight: bold;
+			}
+
+			.list thead th {
+			  vertical-align: bottom;
+			}
+
+			.list caption + thead tr:first-child th,
+			.list caption + thead tr:first-child td,
+			.list colgroup + thead tr:first-child th,
+			.list colgroup + thead tr:first-child td,
+			.list thead:first-child tr:first-child th,
+			.list thead:first-child tr:first-child td {
+			  border-top: 0;
+			}
+
+			.list tbody + tbody {
+			  border-top: 2px solid #dddddd;
+			}
+
+			.list .list {
+			  background-color: #ffffff;
+			}
+
+			.list {
+			  border: 1px solid #dddddd;
+			  border-collapse: separate;
+			  *border-collapse: collapse;
+			  border-left: 0;
+			  -webkit-border-radius: 4px;
+			     -moz-border-radius: 4px;
+			          border-radius: 4px;
+			}
+
+			.list th,
+			.list td {
+			  border-left: 1px solid #dddddd;
+			}
+
+			.list caption + thead tr:first-child th,
+			.list caption + tbody tr:first-child th,
+			.list caption + tbody tr:first-child td,
+			.list colgroup + thead tr:first-child th,
+			.list colgroup + tbody tr:first-child th,
+			.list colgroup + tbody tr:first-child td,
+			.list thead:first-child tr:first-child th,
+			.list tbody:first-child tr:first-child th,
+			.list tbody:first-child tr:first-child td {
+			  border-top: 0;
+			}
+
+			.list thead:first-child tr:first-child > th:first-child,
+			.list tbody:first-child tr:first-child > td:first-child,
+			.list tbody:first-child tr:first-child > th:first-child {
+			  -webkit-border-top-left-radius: 4px;
+			          border-top-left-radius: 4px;
+			  -moz-border-radius-topleft: 4px;
+			}
+
+			.list thead:first-child tr:first-child > th:last-child,
+			.list tbody:first-child tr:first-child > td:last-child,
+			.list tbody:first-child tr:first-child > th:last-child {
+			  -webkit-border-top-right-radius: 4px;
+			          border-top-right-radius: 4px;
+			  -moz-border-radius-topright: 4px;
+			}
+
+			.list thead:last-child tr:last-child > th:first-child,
+			.list tbody:last-child tr:last-child > td:first-child,
+			.list tbody:last-child tr:last-child > th:first-child,
+			.list tfoot:last-child tr:last-child > td:first-child,
+			.list tfoot:last-child tr:last-child > th:first-child {
+			  -webkit-border-bottom-left-radius: 4px;
+			          border-bottom-left-radius: 4px;
+			  -moz-border-radius-bottomleft: 4px;
+			}
+
+			.list thead:last-child tr:last-child > th:last-child,
+			.list tbody:last-child tr:last-child > td:last-child,
+			.list tbody:last-child tr:last-child > th:last-child,
+			.list tfoot:last-child tr:last-child > td:last-child,
+			.list tfoot:last-child tr:last-child > th:last-child {
+			  -webkit-border-bottom-right-radius: 4px;
+			          border-bottom-right-radius: 4px;
+			  -moz-border-radius-bottomright: 4px;
+			}
+
+			.list tfoot + tbody:last-child tr:last-child td:first-child {
+			  -webkit-border-bottom-left-radius: 0;
+			          border-bottom-left-radius: 0;
+			  -moz-border-radius-bottomleft: 0;
+			}
+
+			.list tfoot + tbody:last-child tr:last-child td:last-child {
+			  -webkit-border-bottom-right-radius: 0;
+			          border-bottom-right-radius: 0;
+			  -moz-border-radius-bottomright: 0;
+			}
+
+			.list caption + thead tr:first-child th:first-child,
+			.list caption + tbody tr:first-child td:first-child,
+			.list colgroup + thead tr:first-child th:first-child,
+			.list colgroup + tbody tr:first-child td:first-child {
+			  -webkit-border-top-left-radius: 4px;
+			          border-top-left-radius: 4px;
+			  -moz-border-radius-topleft: 4px;
+			}
+
+			.list caption + thead tr:first-child th:last-child,
+			.list caption + tbody tr:first-child td:last-child,
+			.list colgroup + thead tr:first-child th:last-child,
+			.list colgroup + tbody tr:first-child td:last-child {
+			  -webkit-border-top-right-radius: 4px;
+			          border-top-right-radius: 4px;
+			  -moz-border-radius-topright: 4px;
+			}
+
+			.list tbody > tr:nth-child(even) > td {
+			  background-color: #fff;
+			}
+
+			.list tbody > tr:nth-child(odd) > td {
+			  background-color: #f9f9f9;
+			}
+
+/*
+	Cool Stuff
+		This is the styles for the big frontpage thing and the likes
+ */
+	/* Big Image */
+		#bimg_container {
+			width: 100%;
+			overflow: hidden;
+			height: 450px;
+		}
+			#bimg_container_inner {
+				position: relative;
+				margin-bottom: 20px;
+				width: 100%;
+			}
+
+		#bimg_subtext {
+			position: absolute;
+			top: 390px;
+			margin: 0 auto;
+			color: #ffffff;
+		}
+		/*
+		#bimg_subtext:hover {
+			left: 45%;
+		} */
+		#bimg_subtext a {
+			background: rgba(0, 0, 0, 0.6);
+			color: #ffffff !important;
+			padding: 10px;
+			font-weight: 300;
+			font-size: 25px;
+		}
+		#bimg_subtext a span {
+			font-weight: 600;
+			font-size: 13px;
+		}
+
+		#bimg_uptext {
+			position: absolute;
+			top: 0px; left: 0;
+			width: 100%;
+			color: #fff;
+			height: 110px;
+			padding-top: 15px;
+		}
+		.bg_trans {
+			background: rgba(0, 0, 0, 0.6);
+			height: 83px;
+		}
+		#bimg_uptext ul {
+			list-style: none;
+			padding: 0; margin: 0; padding-top: 5px;
+		}
+		#bimg_uptext li a {
+			color: #fff !important;
+			font-weight: 300;
+		}
+		#bimg_uptext li a:hover {
+			padding-left: 5px;
+		}
+
+		/* These are the boxes below the big image */
+		#subschools {
+			font-family: "Source Sans Pro",sans-serif;
+		}
+		#subschools div.row div {
+			height: 100px;
+			border-top: 1px solid white;
+			border-right: 1px solid white;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#subschools div.row div img {
+			margin-top: -30px
+		}
+		#subschools div.row div .subschool_text {
+			border: none;
+			float:left;
+			position: absolute;
+			top: 0;
+			height: 100px;
+			width:100%;
+			background: rgba(0, 0, 0, 0.50);
+			margin: 0px 0;
+			padding: 60px 7px;
+			font-size: 20px;
+			-webkit-transition: height 1s, margin 0.25s, transform 0s;
+				 -moz-transition: height 1s, margin 0.25s, transform 0s;
+							transition: height 1s, margin 0.25s, transform 0s;
+		}
+		#subschools div.row div:hover .subschool_text {
+			height: 40px;
+			margin: 60px 0;
+			padding: 10px 7px;
+			-webkit-transition: height 0.5s, margin 0.25s, transform 0s;
+				-moz-transition: height 0.5s, margin 0.25s, transform 0s;
+							transition: height 0.5s, margin 0.25s, transform 0s;
+		}
+		#subschools div.row div .subschool_text a {
+			color: white !important;
+		}
+
+
+/*
+	MediaQueries.
+
+ */
 @media (max-width: 979px) {
     .body-container.logged-in {
         padding-top: 109px;
@@ -902,6 +904,239 @@ border-right: 1px solid white;
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* Prevents the page header from being shown on the main page, and subsite's main page */
+/* TODO Make this dynamic. If a page has Main_Page in the URL, don't show the .page-header */
+body.page-Main_Page .page-header,
+body.page-Dubai_Main_Page .page-header,
+body.page-Kosovo_Main_Page .page-header,
+body.page-Zagreb_Main_Page .page-header,
+body.page-Dubrovnik_Main_Page .page-header,
+body.page-Category_Oracle .page-header,
+body.page-Category_JavaScript .page-header,
+body.page-Category_HTML .page-header,
+body.page-Category_PHP .page-header,
+body.page-Category_PL_SQL .page-header,
+body.page-Category_CSS .page-header { display: none; }
+.page-Dubrovnik_Main_Page .wiki-body-section,
+.page-Zagreb_Main_Page .wiki-body-section,
+.page-Kosovo_Main_Page .wiki-body-section,
+.page-Dubai_Main_Page .wiki-body-section  {
+		background: none !important;
+		border: none !important;
+}
+
+
+
+
+
+
+.nav > li > a {
+	padding: 15px;
+}
+
+.editsection {
+	float: right;
+	font-size: 0.8rem;
+	opacity: 0.2;
+}
+
+.editOptions .checkbox input:first-child {
+	margin-left: -20px;
+}
+
+.jumbotron {
+	position: relative;
+}
+
+.jumbotron h1 img {
+	border: 1px solid #eee;
+	-webkit-box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
+	-moz-box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.3 );
+	position: relative;
+	top: -6px;
+}
+
+.jumbotron .nav-pills {
+	opacity: 0.2;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.jumbotron .nav-pills:hover {
+	opacity: 0.8;
+}
+
+
+option.unclickable {
+	color: #ccc;
+}
+
+
+
+.nav .user-icon {
+	border: 1px solid rgba( 55, 55, 55, 0.1 );
+	display: inline-block;
+	margin-right: 0.5em;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+
+.nav .user-icon img {
+	border: 1px solid rgba( 0, 0, 0, 0.5 );
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+
+a.new {
+	color: #86100f;
+}
+
+#catlinks {
+	border-top: 1px dotted #eee;
+	margin-top: 2em;
+	padding: 1em 0;
+}
+
+#catlinks #mw-normal-catlinks > a {
+	color: #999;
+}
+
+#catlinks li {
+	border-left: 1px solid #ddd;
+}
+
+#catlinks li:first-child {
+	border-left: none;
+}
+
+.bottom {
+	background: #333;
+	margin-top: 3em;
+	padding-bottom: 2em;
+}
+
+.bottom .mw-editsection {
+	display: none;
+}
+
+.bottom footer {
+	color: #999;
+	margin-top: 2em;
+}
+
+.printfooter { display: none;}
+
+/* thumb, copied from vector */
+div.thumb {
+	margin-bottom: .5em;
+	width: auto;
+	background-color: transparent;
+}
+div.thumbinner {
+	border: 1px solid #ccc;
+	padding: 3px !important;
+	background-color: #f9f9f9;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
+}
+html .thumbimage {
+	border: 1px solid #ccc;
+}
+html .thumbcaption {
+	border: none;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 3px !important;
+	font-size: 94%;
+}
+div.magnify {
+	float: right;
+	border: none !important;
+	background: none !important;
+}
+div.magnify a, div.magnify img {
+	display: block;
+	border: none !important;
+	background: none !important;
+}
+/* @noflip */
+div.tright {
+	clear: right;
+	float: right;
+	margin: .5em 0 1.3em 1.4em;
+}
+/* @noflip */
+div.tleft {
+	float: left;
+	clear: left;
+	margin: .5em 1.4em 1.3em 0;
+}
+img.thumbborder {
+	border: 1px solid #dddddd;
+}
+
+.brand img {
+	margin-top: -5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
+pre.linenums ol {
+	margin-bottom: 0;
+}
+
+#wiki-outer-body {
+	/*background: url(images/body-bg.png) center top repeat-y;*/
+}
+
+
+
+
+
+
+/* Tables */
+table.list th {
+	background: #eee;
+}
+th.navbox-title .navbar {
+    min-height: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar-default {
+    background-color: #ffffff !important;
+}
+
+
 /*Unsorted Styles*/
     /* Special:ListUsers */
         a.mw-userlink {
@@ -914,82 +1149,7 @@ border-right: 1px solid white;
 /*Site*/
 	/* Content Container */
 		/* Sidebar (TOC) */
-			#toc:not(.toc-sidebar) {
-				display: none;
-				float: right;
-				margin: 0 0 1em 1em;
-			}
 
-			#toc td {
-				background: #eee;
-				border: 1px solid #ddd;
-				border-radius: 0.5em;
-				display: block;
-				-moz-border-radius: 0.5em;
-				-webkit-border-radius: 0.5em;
-				padding: 0 1em 1em 1em;
-
-				box-shadow: 0 0 5px 0 rgba( 0, 0, 0, 0.2 );
-			}
-
-			#toc.toc-sidebar td {
-				background: transparent;
-				border: none;
-				box-shadow: none;
-				display: table-cell;
-				padding: 0;
-			}
-
-			#toc.toc-sidebar li {
-				line-height: 20px;
-				list-style-type: none;
-			}
-
-			#toc.toc-sidebar li li {
-				margin-left: 20px;
-			}
-
-			#toc.toc-sidebar h3 { /* "Contents" label */
-				font-size: 1.2em;
-			}
-
-			.toc-sidebar .toctoggle {
-				display: none;
-			}
-
-			#toctitle h2 {
-				font-size: 16px;
-			}
-			.toc-sidebar > ul {
-				min-height: 20px;
-			    padding: 13px 19px 13px 19px;
-			    margin-bottom: 20px;
-			    background-color: #F5F5F5;
-			    border: 1px solid #E3E3E3;
-			    border-radius: 4px;
-			    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
-			}
-			
-			.toc-sidebar li ul {
-				padding-left: 0;
-			}
-        /* Main Content (With Sidebar) */
-            .wiki-body-section  {
-                background: #ffffff;
-                border: 1px solid #E7E7E7;
-            }
-            .wiki-body-section.col-md-9 {
-                margin-top: 22px !important;
-            }
-            /* Do not show a background on the main page */
-            .page-Main_Page .wiki-body-section, 
-	        .page-Dubrovnik_Main_Page .wiki-body-section,
-	        .page-Zagreb_Main_Page .wiki-body-section,
-	        .page-Kosovo_Main_Page .wiki-body-section,
-	        .page-Dubai_Main_Page .wiki-body-section  {
-                background: none !important;
-                border: none !important;
-            }
 
 
 #preferences {
@@ -1061,44 +1221,3 @@ border-right: 1px solid white;
 }
 
 /* Generl Form Styling */
-	fieldset {
-		padding: 10px;
-		margin-bottom: 20px;
-		border: 1px solid #E5E5E5;
-	}
-	fieldset legend {
-		border: none !important;
-		width: inherit;
-		padding: 0 10px 0px 10px;
-		margin: 0;
-	}
-	fieldset input, fieldset select{
-		margin: 0 10px 0 5px;
-	}
-	fieldset div.checkbox {
-		display: inline !important;
-	}
-	/* No Idea why this is needed. */
-	fieldset:first-child div.checkbox {
-		margin-top: 0px;
-	}
-	fieldset input[type=submit] {
-		clear: left;
-		float: left;
-		margin-top: 15px;
-		margin-left: 0;
-	}
-
-	/* These show up on Special:Preferences. */
-		.mw-htmlform-flatlist-item {
-			height: 25px;
-		}
-		/*Seriously, fuck this themme*/
-		.mw-htmlform-flatlist-item div.checkbox {
-			float: none !important;
-			margin-top: -25px;
-		}
-
-		.mw-input label.checkbox {
-			margin-top: 0;
-		}
