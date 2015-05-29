@@ -87,9 +87,9 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
         $this->html('headelement');
         ?>
         <div class="body-container <?php if ( $wgUser->isLoggedIn() ) { echo "logged-in"; } else { echo "not-logged-in"; }?>">
-
             <div class="navbar navbar-default navbar-fixed-top <?php echo $wgNavBarClasses; ?>" role="navigation">
                 <div class="container">
+
                     <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
                     <div class="navbar-header">
                         <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".top-navbar-collapse">
@@ -116,9 +116,8 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
                                     <li><a href="<?php echo $url_prefix; ?>Special:Random" class="special-pages"><i class="fa fa-star-o"></i> Random Page</a></li>
                                 </ul>
                             </li>
-
                         </ul>
-                        <?php
+                      <?php
                         if ( $wgUser->isLoggedIn() ) {
                             if ( count( $this->data['personal_urls'] ) > 0 ) {
                                 $name = strtolower( $wgUser->getName() );
@@ -127,7 +126,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
                                 <ul<?php $this->html('userlangattributes') ?> class="nav navbar-nav navbar-right">
                                     <?php echo $user_nav; ?>
                                 </ul>
-                            <?php
+                          <?php
                             }//end if
 
                             if ( count( $this->data['content_actions']) > 0 ) {
@@ -529,4 +528,3 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
     public static function link() { }
 }
-
