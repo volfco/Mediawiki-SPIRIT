@@ -1,6 +1,6 @@
 # RITpedia
 
-This is the RITpedia MediaWiki theme.
+This is the RITpedia MediaWiki theme. All content is released under the Apache License except any RIT or RITpedia related images/logos. Those are included as a point of reference, and do not fall under any opensource license.
 
 ## Installation
 First, clone the repository into your `skins/` directory.
