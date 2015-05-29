@@ -15,7 +15,7 @@ $wgExtensionCredits['skin'][] = array(
 	'name'        => 'SPIRIT',
 	'url'         => 'http://volf.co/projects/ritpedia',
 	'author'      => '[http://volf.co Colum McGaley]',
-	'description' => 'RITpedia MediaWiki Theme.',
+	'description' => 'MediaWiki skin using Bootstrap 3',
 );
 
 $wgValidSkinNames['bootstrapmediawiki'] = 'BootstrapMediaWiki';
