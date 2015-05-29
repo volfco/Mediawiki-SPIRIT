@@ -94,16 +94,6 @@
 			margin-top: 0;
 		}
 
-
-
-
-
-
-
-
-
-
-
 /*
  	Nav Bar Styles
  */
@@ -735,8 +725,16 @@
 
 
 /*
-	MediaQueries.
+	Custom styles on Special Pages
+ */
+	/* Login page background */
+		body.page-Special_UserLogin .wiki-outer-body .row .wiki-body-section {
+			background: #FFF url("images/rit_diploma-bg_small.png") no-repeat scroll bottom right !important;
+		}
 
+
+/*
+	MediaQueries.
  */
 @media (max-width: 979px) {
     .body-container.logged-in {
